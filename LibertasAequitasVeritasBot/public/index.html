@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBERTAS AEQUITAS VERITAS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LIBERTAS AEQUITAS VERITAS</h1>
+        <div id="loginSection">
+            <button id="telegramLoginButton">Увійти через Telegram</button>
+        </div>
+
+        <div id="gameSection" style="display: none;">
+            <h1>Счетчик: <span id="score">0</span></h1>
+            <button id="clickButton">Клікни мене!</button>
+            <button id="upgradeButton">Відкрити апгрейди</button>
+            <button id="settingsButton">Налаштування</button>
+        </div>
+        
+        <div id="upgradesSection" style="display: none;">
+            <h2>Апгрейди</h2>
+            <div id="upgrades"></div>
+            <button id="backButton">Назад до гри</button>
+        </div>
+
+        <div id="settingsSection" style="display: none;">
+            <h2>Налаштування</h2>
+            <label>
+                <input type="checkbox" id="musicToggle" checked> Увімкнути фонову музику
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" id="soundEffectsToggle" checked> Увімкнути звукові ефекти
+            </label>
+            <div>
+                <button id="resetButton">Скинути прогрес</button>
+            </div>
+            <button id="backgroundMenuButton">Змінити фон</button>
+            <button id="backToGameFromSettings">Назад до гри</button>
+        </div>
+
+        <div id="backgroundMenu" style="display: none;">
+            <h2>Вибір фону</h2>
+            <div id="backgroundOptions"></div>
+            <button id="backToSettingsButton">Назад до налаштувань</button>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="path_to_background_music.mp3" type="audio/mpeg">
+        Ваш браузер не підтримує аудіо.
+    </audio>
+    
+    <audio id="clickSound">
+        <source src="path_to_click_sound.mp3" type="audio/mpeg">
+        Ваш браузер не підтримує аудіо.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
